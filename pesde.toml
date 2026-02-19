@@ -25,4 +25,4 @@ pesde = "^0.7.0"
 lune = "^0.10.2"
 
 [dependencies]
-crunchyroll-fork = { wally = "teakzc/crunchyroll-fork", version = "^0.2.3" }
+crunchyroll = { wally = "ffrostfall/crunchyroll", version = "^0.2.0" }
