@@ -3,11 +3,11 @@
 
 local crunchyroll = require("./roblox_packages/crunchyroll")
 
-export type AnimationTrack = AnimationTrackData & interalTrackData
+export type CrunchwrapAnimationTrack = AnimationTrackData & interalTrackData
 
 type registryvalue = {
 	motors: { [string]: Motor6D },
-	animations: { [crunchyroll.AnimationAsset]: AnimationTrack },
+	animations: { [crunchyroll.AnimationAsset]: CrunchwrapAnimationTrack },
 	character: Model,
 }
 
@@ -28,7 +28,7 @@ type TrackData = {
 	}?,
 }
 
-export type crunchwrapTrackData = {
+export type CrunchwrapTrackData = {
 	alpha: number,
 	weight: number,
 	priority: number,
@@ -46,7 +46,7 @@ type interalTrackData = {
 	fadein_Elapsed: number?,
 	fadeout_Elapsed: number?,
 	originalWeight: number,
-	ended: boolean,
+	ended: boolean?,
 }
 
 local rig_registry: { [crunchyroll.Rig]: registryvalue } = {}
@@ -106,7 +106,7 @@ Info: Fade in/out is not in seconds but in alpha (0 to 1)
 local function add_animation(
 	animation: crunchyroll.AnimationAsset,
 	rig: crunchyroll.Rig,
-	trackdata: crunchwrapTrackData
+	trackdata: CrunchwrapTrackData
 )
 	local data = retrieve(rig)
 
@@ -114,7 +114,7 @@ local function add_animation(
 		return
 	end
 
-	local transform = table.clone(trackdata) :: AnimationTrack
+	local transform = table.clone(trackdata) :: CrunchwrapAnimationTrack
 
 	transform.start_fade_time = 0
 	transform.stop_fade_time = 0
@@ -218,7 +218,7 @@ local function exponential_lerp(t: number, k: number): number
 	return curve
 end
 
-local function getCurve(track: AnimationTrack, type: "in" | "out", expo: number)
+local function getCurve(track: CrunchwrapAnimationTrack, type: "in" | "out", expo: number)
 	local curve = function(alpha: number)
 		return exponential_lerp(alpha, expo)
 	end
@@ -238,7 +238,7 @@ local function solve_track(
 	dT: number,
 	rig: crunchyroll.Rig,
 	asset: crunchyroll.AnimationAsset,
-	track: AnimationTrack
+	track: CrunchwrapAnimationTrack
 )
 	local divider = asset.length
 
@@ -414,7 +414,7 @@ Returns the full internal track stored for the animation. Table is mutable, so a
 local function retrieve_track(
 	rig: crunchyroll.Rig,
 	animation: crunchyroll.AnimationAsset
-): AnimationTrack?
+): CrunchwrapAnimationTrack?
 	return rig_registry[rig].animations[animation]
 end
 
