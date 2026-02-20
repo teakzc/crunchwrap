@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/crunchwrap",
-	"version": "0.1.0-rc.1",
+	"version": "0.1.0-rc.2",
 	"description": "A powerful ffrostfall/crunchyroll wrapper",
 	"main": "out/init.luau",
 	"scripts": {

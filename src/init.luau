@@ -8,7 +8,7 @@ export type CrunchwrapAnimationTrack = AnimationTrackData & interalTrackData
 
 type registryvalue = {
 	motors: { [string]: Motor6D },
-	animations: { [crunchyroll.AnimationAsset]: AnimationTrack },
+	animations: { [crunchyroll.AnimationAsset]: CrunchwrapAnimationTrack },
 	character: Model,
 }
 
