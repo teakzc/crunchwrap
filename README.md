@@ -52,6 +52,12 @@ It will be hosted on a website soon, stay tuned. All functions are documented.
 
 ## Fade
 
+### IMPORTANT!
+
+When using fades make sure you have a IDLE track in the background. Why?
+
+Because fades utilize weights, and they only work if you have another track playing.
+
 When configuring `fade` times do not set either fadein or fadeout to zero, as this does nothing.
 
 `fade` time is not measured in `seconds` but in a value ranging from 0 to 1; from the start of the animation to the end. This allows for easy fade configuration without calculation.
