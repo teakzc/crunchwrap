@@ -1,0 +1,10 @@
+[package]
+name = "teakzc/crunchwrap"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+include = ["src/init.luau", "README.md", "default.project.json", "wally.toml", "LICENSE"]
+exclude = ["**"]
+
+[dependencies]
+crunchyroll = "ffrostfall/crunchyroll@0.2.0"
