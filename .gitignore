@@ -9,6 +9,7 @@
 .luau_packages/
 .roblox_packages/
 .lune_packages/
+Packages/
 
 node_modules/
 out/

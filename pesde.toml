@@ -4,13 +4,7 @@ description = "A powerful ffrostfall/crunchyroll wrapper."
 authors = ["teakzc"]
 repository = "https://github.com/teakzc/crunchwrap"
 license = "MIT"
-includes = [
-    "LICENSE",
-    "src/init.luau",
-    "src/**",
-    "README.md",
-    "pesde.toml",
-]
+includes = ["src/**", "pesde.toml", "README.md"]
 
 [target]
 environment = "roblox"

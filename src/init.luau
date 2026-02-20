@@ -1,7 +1,7 @@
 --!strict
 --!optimize 2
 
-local crunchyroll = require("./roblox_packages/crunchyroll")
+local crunchyroll = require(script.Parent:FindFirstChild("crunchyroll"))
 
 export type CrunchwrapAnimationTrack = AnimationTrackData & interalTrackData
 

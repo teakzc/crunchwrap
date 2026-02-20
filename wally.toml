@@ -1,9 +1,9 @@
 [package]
 name = "teakzc/crunchwrap"
-version = "0.1.1"
+version = "0.1.12"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-include = ["src/init.luau", "src", "README.md", "default.project.json", "wally.toml", "LICENSE"]
+include = ["src/init.luau", "src", "README.md", "default.project.json", "LICENSE", "wally.toml"]
 exclude = ["**"]
 
 [dependencies]
