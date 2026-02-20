@@ -5,6 +5,11 @@
 /*.rbxlx.lock
 /*.rbxl.lock
 
+/node_modules
+/out
+/include
+*.tsbuildinfo
+
 .pesde/
 .luau_packages/
 .roblox_packages/
